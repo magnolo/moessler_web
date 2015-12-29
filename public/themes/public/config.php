@@ -58,20 +58,29 @@ return [
             //You may use this event to set up your assets.
 
             //You may use this event to set up your assets.
-            $theme->asset()->add('bootstrap', 'packages/bootstrap/css/bootstrap.min.css');
-            $theme->asset()->usePath()->add('lavalite', 'css/theme.css');
-            $theme->asset()->add('fontawsome', 'packages/font-awesome/css/font-awesome.min.css');
-            $theme->asset()->add('swal', 'packages/sweetalert/css/sweetalert.css');
-            $theme->asset()->add('jquery', 'packages/jquery/js/jquery.min.js');
-            $theme->asset()->add('bootstrap', 'packages/bootstrap/js/bootstrap.min.js');
-            $theme->asset()->add('summernote', 'packages/summernote/css/summernote.css');
+            $theme->asset()->usePath()->add('style', 'css/theme.css');
+          $theme->asset()->usePath()->add('responsive', 'css/theme_responsive.css');
+          $theme->asset()->usePath()->add('revslider-css', 'css/revslider/settings.css');
 
-            $theme->asset()->container('footer')->usePath()->add('lavalite', 'js/theme.js');
-            $theme->asset()->container('footer')->add('swal', 'packages/sweetalert/js/sweetalert.min.js');
-            $theme->asset()->container('footer')->add('moment', 'packages/moment/js/moment-with-locales.min.js');
-            $theme->asset()->container('footer')->add('summernote', 'packages/summernote/js/summernote.min.js');
-            $theme->asset()->container('footer')->add('datetimepicker', 'packages/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js');
-            $theme->asset()->container('footer')->usePath()->add('script', 'js/script.js');
+         $theme->asset()->container('footer')->add('jquery', 'packages/jquery.min.js');
+         $theme->asset()->container('footer')->add('jquery-ui', 'packages/jquery-ui.js');
+         $theme->asset()->container('footer')->add('revslider-tools', 'packages/revslider/jquery.themepunch.tools.min.js');
+         $theme->asset()->container('footer')->add('revslider', 'packages/revslider/jquery.themepunch.revolution.min.js');
+         $theme->asset()->container('footer')->add('superfish', 'packages/menu/superfish.min.js');
+         $theme->asset()->container('footer')->add('tinynav', 'packages/menu/tinynav.min.js');
+         $theme->asset()->container('footer')->add('isotope', 'packages/isotope/isotope.pkgd.min.js');
+         $theme->asset()->container('footer')->add('popup', 'packages/mpopup/jquery.magnific-popup.min.js');
+         $theme->asset()->container('footer')->add('scrollto', 'packages/scroolto/scroolto.js');
+         $theme->asset()->container('footer')->add('nicescroll', 'packages/nicescrool/jquery.nicescroll.min.js');
+         $theme->asset()->container('footer')->add('inview', 'packages/inview/jquery.inview.min.js');
+         $theme->asset()->container('footer')->add('parallax', 'packages/parallax/jquery.parallax-1.1.3.js');
+         $theme->asset()->container('footer')->add('countdown', 'packages/countdown/jquery.countdown.js');
+         $theme->asset()->container('footer')->add('countto', 'packages/countto/jquery.countTo.js');
+
+         $theme->asset()->container('footer')->usePath()->add('theme', 'js/theme.js');
+         $theme->asset()->container('footer')->usePath()->add('slider', 'js/slider.js');
+         $theme->asset()->container('footer')->usePath()->add('startup', 'js/startup.js');
+
         },
 
         // Listen on event before render a layout,
